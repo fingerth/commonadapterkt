@@ -19,13 +19,12 @@ class PagerDemoActivity : AppCompatActivity() {
         }
         when (code) {
             0 -> {
-                vp.adapter =
-                    object : CommonPagerAdapter<String>(this, list, R.layout.pager_item_view) {
-                        override fun convert(holder: Holder, position: Int, data: String) {
-                            holder.setText(R.id.tv, data)
-                            holder.setText(R.id.tv2, position.toString())
-                        }
+                vp.adapter = object : CommonPagerAdapter<String>(this, list, R.layout.pager_item_view) {
+                    override fun convert(holder: Holder, position: Int, data: String) {
+                        holder.setText(R.id.tv, data)
+                        holder.setText(R.id.tv2, position.toString())
                     }
+                }
             }
             1 -> {
                 val ad =  object : UnlimitedSlidePagerAdapter<String>(this, list, R.layout.pager_item_view) {

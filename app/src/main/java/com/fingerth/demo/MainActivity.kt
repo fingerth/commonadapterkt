@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.TextView
+import com.fingerth.demo.ui.joke.JokePicActivity
 import com.fingerth.demo.ui.pager.PagerDemoActivity
 import com.fingerth.demo.ui.recycler.RecyclerDemoActivity
 import com.fingerth.demo.ui.recycler.RecyclerDemoActivity2
@@ -19,7 +20,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
         "Unlimited ViewPager Demo(無限滑動)",
         "RecyclerView Demo",
         "RecyclerView Demo(有頭部和foot)",
-        "RecyclerView Demo(不同type的item)"
+        "RecyclerView Demo(不同type的item)",
+        "图片笑话"
     )
     val list = ArrayList<String>()
 
@@ -44,20 +46,23 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
                 ktStartActivity<PagerDemoActivity>(this)
             }
             1 -> {
-                ktStartActivity<PagerDemoActivity>(this){
-                    putExtra("code",1)
+                ktStartActivity<PagerDemoActivity>(this) {
+                    putExtra("code", 1)
                 }
             }
             2 -> {
                 ktStartActivity<RecyclerDemoActivity>(this)
             }
             3 -> {
-                ktStartActivity<RecyclerDemoActivity>(this){
-                    putExtra("code",1)
+                ktStartActivity<RecyclerDemoActivity>(this) {
+                    putExtra("code", 1)
                 }
             }
             4 -> {
                 ktStartActivity<RecyclerDemoActivity2>(this)
+            }
+            5 -> {
+                ktStartActivity<JokePicActivity>(this)
             }
         }
     }

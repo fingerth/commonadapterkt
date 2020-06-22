@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.annotation.LayoutRes
 
 abstract class UnlimitedSlidePagerAdapter<T>(
-    private val context: Context,
-    private val mDataList: List<T>,
+    override val context: Context,
+    override val mDataList: List<T>,
     @LayoutRes mLayoutId: Int
 ) : CommonPagerAdapter<T>(context, mDataList, mLayoutId) {
     private val PAGER_COUNT = 5000000 //假无限滑动，这个数够用了吧！

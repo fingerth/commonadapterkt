@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 
 abstract class CommonAdapter<T>(
-    private val context: Context,
-    private var mDataList: List<T>,
+     val context: Context,
+     var mDataList: List<T>,
     private val itemLayoutId: Int
 ) : BaseAdapter() {
 

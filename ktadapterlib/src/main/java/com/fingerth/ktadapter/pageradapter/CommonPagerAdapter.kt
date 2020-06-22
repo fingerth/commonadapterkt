@@ -8,8 +8,8 @@ import androidx.annotation.LayoutRes
 import androidx.viewpager.widget.PagerAdapter
 
 abstract class CommonPagerAdapter<T>(
-    private val context: Context,
-    private val mDataList: List<T>,
+    open val context: Context,
+    open val mDataList: List<T>,
     @LayoutRes val mLayoutId: Int
 ) : PagerAdapter() {
 

@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 abstract class CommonRecyclerAdapter<T>(
-    private val context: Context,
-    private val mDataList: List<T>
+    val context: Context,
+    val mDataList: List<T>
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private val TYPE_HEADER = 0x00
