@@ -21,10 +21,9 @@ allprojects {
 	
 ```
 dependencies {
-    implementation 'com.github.fingerth:commonadapterkt:1.0.0'
+    implementation 'com.github.fingerth:commonadapterkt:1.0.1'
 }
 ```
-
 
 ### CommonAdapter<T> 一个简单的ListView和GrideView的适配器
 
