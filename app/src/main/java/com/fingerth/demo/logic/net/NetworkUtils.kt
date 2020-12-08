@@ -1,18 +1,15 @@
-package com.fingerth.sunnyweather.logic.network
+package com.fingerth.demo.logic.net
 
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 object NetworkUtils {
 
-
-    private val httpService =  RetrofitUtils.creat<HttpService>()
+    private val httpService by lazy { RetrofitUtils.retrofit("https://bird.ioliu.cn/",HttpService::class.java) }
 
     suspend fun getJokePics(map: Map<String, String>) = httpService.getJokePics(map).await()
 
