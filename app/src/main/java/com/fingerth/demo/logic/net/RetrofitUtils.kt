@@ -72,4 +72,20 @@ object RetrofitUtils {
             }
         }
     }
+
+ private const val L_SIZE = 2000
+
+    private fun log(res: String?) {
+        if (!res.isNullOrBlank()) {
+            val length = res.length
+            val lines: Int = if (length % L_SIZE == 0) length / L_SIZE else length / L_SIZE + 1
+            for (i in 0 until lines) {
+                if (i == lines - 1) {
+                    Log.v("RetrofitUtils", "打印,第" + (i + 1) + "条 ： " + res.substring(i * L_SIZE))
+                } else {
+                    Log.v("RetrofitUtils", "打印,第" + (i + 1) + "条 ： " + res.substring(i * L_SIZE, (i + 1) * L_SIZE))
+                }
+            }
+        }
+    }
 }
